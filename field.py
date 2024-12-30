@@ -4,8 +4,8 @@ class ShoppingCart:
     def __init__(self):
         self.prices = []
 
-    def add(self, price) -> None:
-        self.prices.append(price)
+    def add(self, *prices) -> None:
+        self.prices.extend(prices)
 
     def calculate_total_price(self) -> float:
         return sum(self.prices)
